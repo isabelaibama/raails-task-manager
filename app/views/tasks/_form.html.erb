@@ -1,0 +1,9 @@
+
+<div class='container'>
+  <%= simple_form_for(@task) do |f| %>
+    <%= f.input :title, label: 'Insert task title:', input_html: { class: "h5" }, label_html: { class: "h4 text-light" } %>
+    <%= f.input :details, label: 'Desbribe task details:', input_html: { class: "h5" }, label_html: { class: "h4 text-light" } %>
+    <%= f.input :completed, label: 'Completed?', label_html: { class: "h5 text-light" }, as: :boolean, boolean_style: :inline %>
+    <%= f.submit 'Submit', class: 'btn btn-secondary mb-2' %>
+  <% end %>
+</div>

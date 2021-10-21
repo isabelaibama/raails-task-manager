@@ -1,0 +1,21 @@
+<div class="container" >
+  <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header h1">Task Details</div>
+    <div class="card-body">
+      <h5 class="card-title">title: <%= @task.title %> </h5>
+      <p class="card-text">Details: <%= @task.details %>.</p>
+      <p> Status: <%= @task.completed ? "Completed" : "Not Completed" %> </p>
+      <br>
+      <br>
+    <div>
+      <p class="text-center text-white bg-dark"><%= link_to 'Edit', edit_task_path(@task) %></p>
+      <p class="text-center text-white bg-dark"><%= link_to 'Delete', task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %></p>
+      <p class="text-center text-white bg-dark"><%= link_to 'Back Tasks List', tasks_path %></p>
+      
+    </div>
+      
+    </div>
+</div>
+
+
+
